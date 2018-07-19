@@ -20,7 +20,7 @@
   font-style: italic; }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'OpenSansLight';
   src: url("../../fonts/OpenSans-Light.eot");
   src: url("../../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/OpenSans-Light.woff2") format("woff2"), url("../../fonts/OpenSans-Light.woff") format("woff"), url("../../fonts/OpenSans-Light.ttf") format("truetype"), url("../../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
   font-weight: 300;
@@ -34,7 +34,8 @@
 
 body {
   background-color: black;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: 'OpenSansLight', Verdana, Sans-Serif; }
 
 .logo-line {
   display: -webkit-box;

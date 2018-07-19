@@ -1,42 +1,54 @@
-@import 'partials/variables';
-@import 'partials/mixins';
-@import 'partials/fonts';
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: black;
-    font-size: 16px;
-}
-
-.logo-line {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 180px;
-}
-
-.front-page-text {
-    display: flex;
-    color: #efffff;
-    text-align: center;
-    justify-content: center;
-}
-
-.search-form-inner {
-    display: flex;
-    cursor: default;
-    text-align: center;
-    justify-content: center;
-}
-
-.footer-info {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #c2c2c2;
-    margin-top: 150px;
-}
+                                                                                @import 'partials/variables';
+                                                                @import 'partials/mixins';
+                                                                @import 'partials/fonts';
+                                                                *,
+                                                                *:before,
+                                                                *:after {
+                                                                    box-sizing: border-box;
+                                                                }
+                                                                
+                                                                body {
+                                                                    background-color: black;
+                                                                    font-size: 16px;
+                                                                    font-family: 'OpenSansLight', Verdana, Sans-Serif;
+                                                                }
+                                                                
+                                                                .logo-line {
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    margin-top: 180px;
+                                                                }
+                                                                
+                                                                .front-page-text {
+                                                                    display: flex;
+                                                                    color: #efffff;
+                                                                    text-align: center;
+                                                                    justify-content: center;
+                                                                    font-size: 12px;
+                                                                }
+                                                                
+                                                                .search-form-inner {
+                                                                    display: flex;
+                                                                    cursor: pointer;
+                                                                    text-align: center;
+                                                                    justify-content: center;
+                                                                    font-family: 'Open Sans';
+                                                                    font-weight: bold;
+                                                                }
+                                                                
+                                                                .footer-info {
+                                                                    display: flex;
+                                                                    text-align: center;
+                                                                    justify-content: center;
+                                                                    color: #c2c2c2;
+                                                                    margin-top: 200px;
+                                                                }
+                                                                
+                                                                $screen-width: 600px;
+                                                                @mixin screen {
+                                                                    @media (min-width: $screen-width) {
+                                                                        @content: $desktop-width: 1000px;
+                                                                        @mixin desktop {
+                                                                            @media (min-width: $desktop-width) {
+                                                                                @content
