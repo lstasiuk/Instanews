@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-size: 16px;
+    font-family: 'OpenSansLight', Verdana, Sans-Serif;
+}
+
+.logo-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 180px;
+}
+
+.front-page-text {
+    display: flex;
+    color: #efffff;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.search-form-inner {
+    display: flex;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    font-family: "OpenSansLight", Verdana, Sans-Serif;
+    font-weight: 600;
+}
