@@ -1,10 +1,8 @@
 $(document).ready(function() {
 
     $("#sections").on("change", function() {
-
+        $("#appended-stories").empty();
         var selectedStory = $("#sections").val();
-
-        $('#appended-stories').empty();
 
         var url = 'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
         url += '?' + $.param({
@@ -18,16 +16,10 @@ $(document).ready(function() {
             .done(function(data) {
                 console.log(data.results);
                 $.each(data.results, function(key, value) {
-                    $("appended-stories").append("<div class='articles'>" + "<a href=" + value.url + "></a>" + "<img src=" + value.multimedia[4].url + ">" + "<p>" + value.abstract + "</p>" + "</div>")
-                        ("#appended-stories").append(
-                            console.log(data.results)
+                    $("#appended-stories").append("<div class='articles'>" + "<a target='_blank' href=" + value.url + ">" + "<img class='images' src=" + value.multimedia[4].url + ">" + "<div class='abstract' <p>" + value.abstract + "</p></div>" + "</a>" + "</div>")
 
-                        )
+
                 });
             })
-            .fail(function(err) {
-                throw err;
-            })
-            .always(function() {});
     });
 });

@@ -33,3 +33,8 @@ body {
     font-family: "OpenSansLight", Verdana, Sans-Serif;
     font-weight: 600;
 }
+
+@include screen {
+    display: flex;
+    text-align: center;
+}
