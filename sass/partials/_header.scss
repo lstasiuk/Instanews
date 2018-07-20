@@ -14,27 +14,60 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin-top: 180px;
-}
-
-.front-page-text {
-    display: flex;
-    color: #efffff;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
+    @include screen {
+        margin-top: 0;
+    }
 }
 
 .search-form-inner {
     display: flex;
-    cursor: pointer;
-    text-align: center;
+    color: #efffff;
     justify-content: center;
-    font-family: "OpenSansLight", Verdana, Sans-Serif;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    flex-direction: column;
+    cursor: pointer;
+    font-family: 'OpenSans', Verdana, Sans-Serif;
     font-weight: 600;
+    font-style: normal;
+    color: #efffff;
 }
 
-@include screen {
-    display: flex;
-    text-align: center;
+.search-form-inner p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.active {
+    .logo-line {
+        margin-top: 0;
+    }
+    img {
+        height: 100px;
+        width: auto;
+    }
+    margin: 50px;
+}
+
+header {
+    height: 100vh;
+    @include screen {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    img {
+        @include screen {
+            height: 100px;
+        }
+    }
+}
+
+.articles-loaded {
+    height: 200px;
 }

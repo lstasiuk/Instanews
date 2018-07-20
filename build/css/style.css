@@ -376,9 +376,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
   margin-top: 180px; }
+  @media (min-width: 600px) {
+    .logo-line {
+      margin-top: 0; } }
 
-.front-page-text {
+.search-form-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,22 +393,51 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px; }
-
-.search-form-inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "OpenSansLight", Verdana, Sans-Serif;
-  font-weight: 600; }
+  font-size: 14px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+  font-family: 'OpenSans', Verdana, Sans-Serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #efffff; }
 
-@media (min-width: 600px) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center; }
+.search-form-inner p {
+  font-size: 14px;
+  font-weight: 300; }
+
+.active {
+  margin: 50px; }
+  .active .logo-line {
+    margin-top: 0; }
+  .active img {
+    height: 100px;
+    width: auto; }
+
+header {
+  height: 100vh; }
+  @media (min-width: 600px) {
+    header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  @media (min-width: 600px) {
+    header img {
+      height: 100px; } }
+
+.articles-loaded {
+  height: 200px; }
