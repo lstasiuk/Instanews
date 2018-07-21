@@ -3,5 +3,16 @@
     text-align: center;
     justify-content: center;
     color: #c2c2c2;
-    margin-top: 200px;
+    padding-bottom: 25px;
+    margin-top: -250px;
+}
+
+.footer-info {
+    @include screen {
+        margin-top: -100px;
+        display: flex;
+        text-align: right;
+        justify-content: right;
+        padding-left: 20px;
+    }
 }

@@ -27,13 +27,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 14px;
+    font-size: 100%;
     flex-direction: column;
     cursor: pointer;
     font-family: 'OpenSans', Verdana, Sans-Serif;
     font-weight: 600;
     font-style: normal;
-    color: #efffff;
 }
 
 .search-form-inner p {
@@ -60,14 +59,16 @@ header {
         justify-content: center;
         align-items: center;
         flex-direction: row;
+        padding-right: 100px;
     }
     img {
         @include screen {
-            height: 100px;
+            height: 140px;
         }
     }
 }
 
 .articles-loaded {
     height: 200px;
+    width: auto;
 }
