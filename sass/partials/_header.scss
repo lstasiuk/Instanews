@@ -15,6 +15,10 @@ body {
     min-height: 100vh;
 }
 
+header {
+    transition: .5s;
+}
+
 .logo-line {
     display: flex;
     align-items: center;
@@ -22,7 +26,6 @@ body {
     text-align: center;
     margin-top: 180px;
     @include screen {
-        // margin-top: 220px;
         align-items: left;
         justify-content: left;
         text-align: left;
@@ -35,6 +38,18 @@ body {
     @include desktop {
         margin-top: 220px;
         margin-left: 30px;
+        img {
+            height: 220px;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.search-form-inner p {
+    font-size: 12px;
+    @include screen {
+        font-size: 14px;
     }
 }
 
@@ -48,10 +63,8 @@ body {
     flex-direction: column;
     cursor: pointer;
     font-family: 'OpenSans', Verdana, Sans-Serif;
-    font-weight: 600;
     font-style: normal;
     font-size: 16px;
-    font-weight: 300;
     @include screen {
         margin-top: -100px;
         padding-left: 30px;

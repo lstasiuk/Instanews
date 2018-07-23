@@ -2,10 +2,14 @@
         color: #c2c2c2;
         font-size: 14px;
         text-align: center;
-        margin-top: 180px;
+        margin-top: 200px;
         bottom: 0;
+        @include screen {
+            margin-top: 300px;
+        }
         @include desktop {
             text-align: left;
             padding-left: 30px;
+            margin-top: 200px;
         }
     }
