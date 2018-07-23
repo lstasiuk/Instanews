@@ -2,8 +2,11 @@
         color: #c2c2c2;
         font-size: 14px;
         text-align: center;
-        margin-top: 200px;
+        padding-top: 200px;
+        // margin-top: 200px;
         bottom: 0;
+        border: 0;
+        margin: 0;
         @include screen {
             margin-top: 300px;
         }
