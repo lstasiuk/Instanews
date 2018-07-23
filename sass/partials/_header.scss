@@ -16,9 +16,17 @@ body {
     justify-content: center;
     text-align: center;
     margin-top: 180px;
-    @include screen {
-        margin-top: 0;
-    }
+}
+
+@include screen {
+    margin-top: 0;
+}
+
+@include screen {
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    margin-top: 200px;
 }
 
 .search-form-inner {
@@ -47,12 +55,11 @@ body {
     img {
         height: 100px;
         width: auto;
+        margin: 50px;
     }
-    margin: 50px;
 }
 
 header {
-    height: 100vh;
     @include screen {
         display: flex;
         text-align: center;
@@ -61,10 +68,16 @@ header {
         flex-direction: row;
         padding-right: 100px;
     }
-    img {
-        @include screen {
-            height: 140px;
-        }
+}
+
+.front-page-image {
+    @include desktop {
+        display: flex;
+        text-align: left;
+        justify-content: left;
+        align-items: left;
+        flex-direction: row;
+        padding-right: 100px;
     }
 }
 

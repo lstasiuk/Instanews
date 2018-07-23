@@ -1,18 +1,24 @@
-.footer-info {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #c2c2c2;
-    padding-bottom: 25px;
-    margin-top: -250px;
-}
-
-.footer-info {
-    @include screen {
-        margin-top: -100px;
-        display: flex;
-        text-align: right;
-        justify-content: right;
-        padding-left: 20px;
+    .footer-info {
+        color: #c2c2c2;
+        // display: flex;
+        font-size: 14px;
+        // justify-content: center;
+        // align-items: center;
+        text-align: center;
+        // vertical-align: baseline;
+        margin-top: 180px;
     }
-}
+    
+    // .footer-info p {
+    //     @include screen {
+    //         text-align: center;
+    //         // justify-content: center;
+    //         // align-items: center;
+    //         margin-top: 100px;
+    //     }
+    // }
+    .footer-info p {
+        @include desktop {
+            text-align: left;
+        }
+    }
