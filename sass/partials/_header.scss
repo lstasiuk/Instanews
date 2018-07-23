@@ -22,12 +22,17 @@ body {
     text-align: center;
     margin-top: 180px;
     @include screen {
-        margin-top: 0;
-    }
-    @include desktop {
+        // margin-top: 220px;
         align-items: left;
         justify-content: left;
         text-align: left;
+        img {
+            height: 130px;
+            padding-left: 100px;
+            margin-top: 90px;
+        }
+    }
+    @include desktop {
         margin-top: 220px;
         margin-left: 30px;
     }
@@ -45,14 +50,15 @@ body {
     font-family: 'OpenSans', Verdana, Sans-Serif;
     font-weight: 600;
     font-style: normal;
-}
-
-.search-form-inner {
     font-size: 16px;
     font-weight: 300;
+    @include screen {
+        margin-top: -100px;
+        padding-left: 30px;
+    }
     @include desktop {
         margin-top: 180px;
-        padding-left: 50px;
+        margin-left: 20px;
     }
 }
 

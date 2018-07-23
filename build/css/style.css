@@ -358,16 +358,19 @@ body {
   margin-top: 180px; }
   @media (min-width: 600px) {
     .logo-line {
-      margin-top: 0; } }
-  @media (min-width: 1000px) {
-    .logo-line {
       -webkit-box-align: left;
           -ms-flex-align: left;
               align-items: left;
       -webkit-box-pack: left;
           -ms-flex-pack: left;
               justify-content: left;
-      text-align: left;
+      text-align: left; }
+      .logo-line img {
+        height: 130px;
+        padding-left: 100px;
+        margin-top: 90px; } }
+  @media (min-width: 1000px) {
+    .logo-line {
       margin-top: 220px;
       margin-left: 30px; } }
 
@@ -391,15 +394,17 @@ body {
   cursor: pointer;
   font-family: 'OpenSans', Verdana, Sans-Serif;
   font-weight: 600;
-  font-style: normal; }
-
-.search-form-inner {
+  font-style: normal;
   font-size: 16px;
   font-weight: 300; }
+  @media (min-width: 600px) {
+    .search-form-inner {
+      margin-top: -100px;
+      padding-left: 30px; } }
   @media (min-width: 1000px) {
     .search-form-inner {
       margin-top: 180px;
-      padding-left: 50px; } }
+      margin-left: 20px; } }
 
 .active .logo-line {
   margin-top: 0; }
