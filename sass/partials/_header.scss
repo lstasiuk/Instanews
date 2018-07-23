@@ -8,6 +8,11 @@ body {
     background-color: black;
     font-size: 16px;
     font-family: 'OpenSansLight', Verdana, Sans-Serif;
+    min-height: 100vh;
+}
+
+.container {
+    min-height: 100vh;
 }
 
 .logo-line {
@@ -16,17 +21,16 @@ body {
     justify-content: center;
     text-align: center;
     margin-top: 180px;
-}
-
-@include screen {
-    margin-top: 0;
-}
-
-@include screen {
-    align-items: left;
-    justify-content: left;
-    text-align: left;
-    margin-top: 200px;
+    @include screen {
+        margin-top: 0;
+    }
+    @include desktop {
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+        margin-top: 220px;
+        margin-left: 30px;
+    }
 }
 
 .search-form-inner {
@@ -43,9 +47,13 @@ body {
     font-style: normal;
 }
 
-.search-form-inner p {
-    font-size: 14px;
+.search-form-inner {
+    font-size: 16px;
     font-weight: 300;
+    @include desktop {
+        margin-top: 180px;
+        padding-left: 50px;
+    }
 }
 
 .active {
@@ -56,17 +64,6 @@ body {
         height: 100px;
         width: auto;
         margin: 50px;
-    }
-}
-
-header {
-    @include screen {
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        padding-right: 100px;
     }
 }
 

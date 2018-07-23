@@ -1,24 +1,11 @@
-    .footer-info {
-        color: #c2c2c2;
-        // display: flex;
-        font-size: 14px;
-        // justify-content: center;
-        // align-items: center;
-        text-align: center;
-        // vertical-align: baseline;
-        margin-top: 180px;
-    }
-    
-    // .footer-info p {
-    //     @include screen {
-    //         text-align: center;
-    //         // justify-content: center;
-    //         // align-items: center;
-    //         margin-top: 100px;
-    //     }
-    // }
     .footer-info p {
+        color: #c2c2c2;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 180px;
+        bottom: 0;
         @include desktop {
             text-align: left;
+            padding-left: 30px;
         }
     }

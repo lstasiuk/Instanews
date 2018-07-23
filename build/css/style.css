@@ -338,7 +338,11 @@ template {
 body {
   background-color: black;
   font-size: 16px;
-  font-family: 'OpenSansLight', Verdana, Sans-Serif; }
+  font-family: 'OpenSansLight', Verdana, Sans-Serif;
+  min-height: 100vh; }
+
+.container {
+  min-height: 100vh; }
 
 .logo-line {
   display: -webkit-box;
@@ -352,19 +356,20 @@ body {
           justify-content: center;
   text-align: center;
   margin-top: 180px; }
-
-@media (min-width: 600px) {
-  margin-top: 0; }
-
-@media (min-width: 600px) {
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  text-align: left;
-  margin-top: 200px; }
+  @media (min-width: 600px) {
+    .logo-line {
+      margin-top: 0; } }
+  @media (min-width: 1000px) {
+    .logo-line {
+      -webkit-box-align: left;
+          -ms-flex-align: left;
+              align-items: left;
+      -webkit-box-pack: left;
+          -ms-flex-pack: left;
+              justify-content: left;
+      text-align: left;
+      margin-top: 220px;
+      margin-left: 30px; } }
 
 .search-form-inner {
   display: -webkit-box;
@@ -388,9 +393,13 @@ body {
   font-weight: 600;
   font-style: normal; }
 
-.search-form-inner p {
-  font-size: 14px;
+.search-form-inner {
+  font-size: 16px;
   font-weight: 300; }
+  @media (min-width: 1000px) {
+    .search-form-inner {
+      margin-top: 180px;
+      padding-left: 50px; } }
 
 .active .logo-line {
   margin-top: 0; }
@@ -399,24 +408,6 @@ body {
   height: 100px;
   width: auto;
   margin: 50px; }
-
-@media (min-width: 600px) {
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding-right: 100px; } }
 
 @media (min-width: 1000px) {
   .front-page-image {
@@ -477,12 +468,13 @@ body {
   color: white;
   bottom: 0; }
 
-.footer-info {
+.footer-info p {
   color: #c2c2c2;
   font-size: 14px;
   text-align: center;
-  margin-top: 180px; }
-
-@media (min-width: 1000px) {
-  .footer-info p {
-    text-align: left; } }
+  margin-top: 180px;
+  bottom: 0; }
+  @media (min-width: 1000px) {
+    .footer-info p {
+      text-align: left;
+      padding-left: 30px; } }
