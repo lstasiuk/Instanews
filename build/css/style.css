@@ -465,12 +465,11 @@ header {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-top: 0px; }
   .articles-loaded img {
-    margin-top: 10px;
-    height: 300px;
-    width: auto;
-    margin-bottom: 20px; }
+    height: 600px;
+    width: auto; }
   @media (min-width: 600px) {
     .articles-loaded {
       height: 150px;
