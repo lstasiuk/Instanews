@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     sass = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
     cssnano = require("gulp-cssnano"),
-    prettyError = require("gulp-prettyError");
+    prettyError = require("gulp-prettyError"),
+    babel = require("gulp-babel");
 
 gulp.task("sass", function() {
     return gulp
@@ -25,11 +26,6 @@ gulp.task("sass", function() {
         .pipe(gulp.dest("./build/css"));
 });
 
-// Task below - what do you want gulp to do?
-// gulp.task('default', defaultTask)
-// default = gulp
-// linting task
-
 gulp.task('lint', function() {
     return (gulp
         .src('./js/*.js')
@@ -38,14 +34,21 @@ gulp.task('lint', function() {
         .pipe(eslint.failAfterError())
     );
 });
-
-gulp.task("scripts", gulp.series("lint", function() {
-    return gulp
-        .src("./js/*.js") // these are the files gulp will consume
-        .pipe(uglify()) //call uglify function on these files
-        .pipe(rename({ extname: ".min.js" })) //rename ugly file
-        .pipe(gulp.dest("./build/js"));
-}));
+gulp.task(
+    'scripts',
+    gulp.series('lint', function() {
+        return gulp
+            .src('./js/*.js')
+            .pipe(babel())
+            .pipe(uglify())
+            .pipe(
+                rename({
+                    extname: '.min.js'
+                })
+            )
+            .pipe(gulp.dest('./build/js'));
+    })
+);
 
 gulp.task("watch", function() {
     gulp.watch("js/*.js", gulp.series("scripts"));
