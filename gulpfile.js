@@ -1,4 +1,3 @@
-// Modules you need!
 var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
@@ -55,9 +54,6 @@ gulp.task("watch", function() {
     gulp.watch("sass/**/*.scss", gulp.series("sass"));
 });
 
-// var gulp = require('gulp');
-// var browserSync = require('browser-sync').create();
-// Make a browsersync task
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {

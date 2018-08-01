@@ -3,11 +3,11 @@ $(document).ready(function() {
     $("#sections").on("change", function() {
         $('header').addClass("active")
         $("#appended-stories").empty();
-        let selectedStory = $("#sections").val();
+        var selectedStory = $("#sections").val();
 
         $("#header-nav").addClass("articles-loaded");
 
-        let url = 'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
+        var url = 'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
         url += '?' + $.param({
             'api-key': "b340bf0706784521880392a9f328b350"
         });
@@ -17,7 +17,7 @@ $(document).ready(function() {
                 method: 'GET',
             })
             .done(function(data) {
-                let images = data.results
+                var images = data.results
                     .filter(function(result) {
                         return result.multimedia.length;
                     })
