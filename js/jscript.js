@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     $("#sections").on("change", function() {
         var loader = "<div class='loading-gif'>";
-        loader += "<img src='./images/ajax-loader.gif' alt='loading page'>";
+        loader += "<img src='images/ajax-loader.gif' alt='loading page'>";
         loader += "</div>";
 
 
