@@ -14,4 +14,4 @@ Major learnings for this project included:
 - Gulp
 
 
-Link to  website:file:///C:/Users/Nikita/Downloads/Leanne%20Stasiuk/new-york-times-project-2/index.html
+Link to  website:https://lstasiuk.github.io/Instanews/
