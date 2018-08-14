@@ -32,3 +32,15 @@
     color: white;
     bottom: 0;
 }
+
+.loading-gif {
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    img {
+        max-width: 100%;
+    }
+}

@@ -1,8 +1,14 @@
 $(document).ready(function() {
 
     $("#sections").on("change", function() {
+        var loader = "<div class='loading-gif'>";
+        loader += "<img src='./images/ajax-loader.gif' alt='loading page'>";
+        loader += "</div>";
+
+
         $('header').addClass("active")
         $("#appended-stories").empty();
+        $("#appended-stories").append(loader);
         var selectedStory = $("#sections").val();
 
         $("#header-nav").addClass("articles-loaded");
@@ -28,6 +34,15 @@ $(document).ready(function() {
 
 
                 });
+
             })
+
+        .fail(function(err) {
+            alert("Something went wrong.");
+        })
+
+        .always(function() {
+            $(".loading-gif").remove();
+        })
     });
 });
