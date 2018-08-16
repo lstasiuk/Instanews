@@ -1,14 +1,10 @@
 $(document).ready(function() {
 
     $("#sections").on("change", function() {
-        var loader = "<div class='loading-gif'>";
-        loader += "<img src='images/ajax-loader.gif' alt='loading page'>";
-        loader += "</div>";
-
 
         $('header').addClass("active")
         $("#appended-stories").empty();
-        $("#appended-stories").append(loader);
+        $("#appended-stories").append('<img id="loading-gif" src="../images/ajax-loader.gif"/>')
         var selectedStory = $("#sections").val();
 
         $("#header-nav").addClass("articles-loaded");
@@ -42,7 +38,7 @@ $(document).ready(function() {
         })
 
         .always(function() {
-            $(".loading-gif").remove();
+            $("#loading-gif").remove();
         })
     });
 });

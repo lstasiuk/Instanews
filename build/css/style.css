@@ -530,6 +530,17 @@ header {
   color: white;
   bottom: 0; }
 
+#loading-gif {
+  height: 150px;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  position: absolute; }
+  #loading-gif img {
+    max-width: 100%; }
+
 .footer-info p {
   color: #c2c2c2;
   font-size: 14px;

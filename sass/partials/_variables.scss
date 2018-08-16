@@ -1,0 +1,13 @@
+$screen-width: 600px;
+@mixin screen {
+    @media (min-width: $screen-width) {
+        @content;
+    }
+}
+
+$desktop-width: 1000px;
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}
