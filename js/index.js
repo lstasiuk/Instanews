@@ -26,9 +26,17 @@ $(document).ready(function() {
                     .slice(0, 12);
 
                 $.each(images, function(key, value) {
-                    $("#appended-stories").append("<div class='articles'>" + "<a target='_blank' href=" + value.url + ">" + "<img class='images' src=" + value.multimedia[4].url + ">" + "<div class='abstract' <p>" + value.abstract + "</p></div>" + "</a>" + "</div>")
-
-
+                    var imageUrl = value.multimedia[4].url;
+                    var storyUrl = value.url;
+                    var abstract = value.abstract
+                    var output = "<div class='articles' style='background: url(" + imageUrl + "); background-size:cover; background-position:center;'>" + "<a target='_blank' href='" + storyUrl + "'>";
+                    output += "<div class='abstract'>";
+                    output += "<p>" + abstract + "</p>";
+                    output += "</div>";
+                    output += "</a>";
+                    output += "</div>";
+                    $("#appended-stories")
+                        .append(output)
                 });
 
             })
