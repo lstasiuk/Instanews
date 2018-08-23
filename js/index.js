@@ -1,63 +1,51 @@
 $(document).ready(function() {
-    //url for api request
-    $("#categories").on("change", function() {
-        $("#gif-loader").css("display", "block");
-        $('.site-header').addClass("site-header-small");
+            //url for api request
+            $("#sections").on("change", function() {
+                $('header').addClass("active")
+                $("#appended-stories").empty();
+                $("#appended-stories").append('<img id="loading-gif" src="../images/ajax-loader.gif"/>')
+                var selectedStory = $("#sections").val();
+
+                $(".article-boxes").empty();
 
 
-        var selectedStory = $("#categories").val();
-
-
-        $(".article-boxes").empty();
-
-
-        var url =
-            "https://api.nytimes.com/svc/topstories/v2/" + selectedStory + ".json";
-        url +=
-            "?" +
-            $.param({
-                "api-key": "015e1e546b504dcab3dd3878ebbdc372"
-            });
-
-        $.ajax({ //ajax request 
-                url: url,
-                method: "GET"
-            })
-            .done(function(data) { //filter results for images only 
-                var onlyImg = data.results
-                    .filter(function(result) {
-                        return result.multimedia.length;
-                    })
-                    .slice(0, 12);
-
-
-
-                $.each(onlyImg, function(key, value) { //loop for pictures + articles
-                    var html = "<a target='_blank' href=" + value.url + ">" +
-                        "<div class='articles' id='articles' style='background: url(" +
-                        value.multimedia[4].url +
-                        "); background-size: cover; background-position: center;'>";
-
-                    html += "<p class='abstract'>" + value.abstract + "</p>";
-
-                    html += "</div>";
-
-                    html += "</a>";
-
-
-                    $(".article-boxes").append(html);
+                $("#header-nav").addClass("articles-loaded");
+                var url = 'https://api.nytimes.com/svc/topstories/v2/' + selectedStory + '.json';
+                url += '?' + $.param({
+                    'api-key': "b340bf0706784521880392a9f328b350"
                 });
 
-            })
-            .fail(function(err) { //error notification for failing to load
-                console.log("request failed");
-                $(".article-boxes").append("<h3>Sorry there was an error</h3>");
-            })
-            .always(function() { //always run gif loader whilst loading pictures 
-                console.log("always run");
-                $("#gif-loader").css("display", "none");
+                $.ajax({ //ajax request 
+                        url: url,
+                        method: "GET"
+                    })
+                    .done(function(data) { //filter results for images only 
+                        var images = data.results.filter(function(result) {
+                                return result.multimedia.length;
+                            })
+                            .slice(0, 12);
 
 
+
+                        $.each(images, function(key, value) {
+                            var imageUrl = value.multimedia[4].url;
+                            var storyUrl = value.url;
+                            var abstract = value.abstract
+                            var output = "<div class='articles' style='background: url(" + imageUrl + "); background-size:cover; background-position:center;'>" + "<a target='_blank' href='" + storyUrl + "'>";
+                            output += "<div class='abstract'>";
+                            output += "<p>" + abstract + "</p>";
+                            output += "</div>";
+                            output += "</a>";
+                            output += "</div>";
+                            $("#appended-stories")
+                                .append(output);
+                        });
+
+                    })
+                    .fail(function() { //error notification for failing to load
+                        alert("Something went wrong.");
+                    })
+                    .always(function() {
+                        $("#loading-gif").remove();
+                    })
             });
-    });
-});
